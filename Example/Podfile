@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CSSKit_Example' do
+  pod 'CSSKit', :path => '../'
+
+  target 'CSSKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
