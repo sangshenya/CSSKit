@@ -1,6 +1,6 @@
 {
   "name": "CSSKit",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "summary": "A short description of CSSKit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/sangshenya/CSSKit",
@@ -13,17 +13,20 @@
   },
   "source": {
     "git": "https://github.com/sangshenya/CSSKit.git",
-    "tag": "0.1.0"
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "CSSKit/Classes",
   "frameworks": [
     "UIKit",
     "CoreTelephony",
-    "SystemConfiguration"
+    "SystemConfiguration",
+    "Foundation"
   ],
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
   "subspecs": [
     {
       "name": "UIKit",

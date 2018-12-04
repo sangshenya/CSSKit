@@ -35,12 +35,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isNotBlank;
 
 /**
- 尝试解析该字符串并返回一个'NSNumber'类型.
- @return 如果成功返回'NSNumber'类型, 如果解析失败返回 nil.
- */
-- (nullable NSNumber *)numberValue;
-
-/**
  用UTF-8编码成NSData类型
  */
 - (nullable NSData *)dataValue;
@@ -125,19 +119,6 @@ NS_ASSUME_NONNULL_BEGIN
  may be rounded up to the nearest whole number.
  */
 - (CGFloat)heightForFont:(UIFont *)font width:(CGFloat)width;
-
-#pragma mark - NSNumber Compatible
-
-// Now you can use NSString as a NSNumber
-@property (readonly) char charValue;
-@property (readonly) unsigned char unsignedCharValue;
-@property (readonly) short shortValue;
-@property (readonly) unsigned short unsignedShortValue;
-@property (readonly) unsigned int unsignedIntValue;
-@property (readonly) long longValue;
-@property (readonly) unsigned long unsignedLongValue;
-@property (readonly) unsigned long long unsignedLongLongValue;
-@property (readonly) NSUInteger unsignedIntegerValue;
 
 @end
 

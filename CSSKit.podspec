@@ -29,15 +29,15 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-  s.source_files = 'CSSKit/Classes'
+#  s.source_files = 'CSSKit/Classes/**/*'
 #  s.static_framework = ture
 #  s.requires_arc = ture
 
-  s.frameworks = 'UIKit', 'CoreTelephony', 'SystemConfiguration'
-  
-  s.subspec 'UIKit' do |ss|
-      ss.source_files = 'CSSKit/Classes/UIKit/**/*'
-  end
+  s.frameworks = 'CoreTelephony', 'SystemConfiguration', 'Foundation'
+
+  s.xcconfig = {
+      'OTHER_LDFLAGS' => '-ObjC',
+  }
 
   s.subspec 'Foundation' do |ss|
       ss.source_files = 'CSSKit/Classes/Foundation/**/*'

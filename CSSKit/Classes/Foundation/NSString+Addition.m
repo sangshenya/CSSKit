@@ -7,7 +7,6 @@
 
 #import "NSString+Addition.h"
 #import "NSData+Addition.h"
-#import "NSNumber+Addition.h"
 
 @implementation NSString (Addition)
 
@@ -48,9 +47,6 @@
     return NO;
 }
 
-- (NSNumber *)numberValue {
-    return [NSNumber numberWithString:self];
-}
 
 - (NSData *)dataValue {
     return [self dataUsingEncoding:NSUTF8StringEncoding];
@@ -185,44 +181,6 @@
 - (CGFloat)heightForFont:(UIFont *)font width:(CGFloat)width {
     CGSize size = [self sizeForFont:font size:CGSizeMake(width, HUGE) mode:NSLineBreakByWordWrapping];
     return size.height;
-}
-
-#pragma mark - NSNumber Compatible
-
-- (char)charValue {
-    return self.numberValue.charValue;
-}
-
-- (unsigned char)unsignedCharValue {
-    return self.numberValue.unsignedCharValue;
-}
-
-- (short)shortValue {
-    return self.numberValue.shortValue;
-}
-
-- (unsigned short)unsignedShortValue {
-    return self.numberValue.unsignedShortValue;
-}
-
-- (unsigned int)unsignedIntValue {
-    return self.numberValue.unsignedIntValue;
-}
-
-- (long)longValue {
-    return self.numberValue.longValue;
-}
-
-- (unsigned long)unsignedLongValue {
-    return self.numberValue.unsignedLongValue;
-}
-
-- (unsigned long long)unsignedLongLongValue {
-    return self.numberValue.unsignedLongLongValue;
-}
-
-- (NSUInteger)unsignedIntegerValue {
-    return self.numberValue.unsignedIntegerValue;
 }
 
 @end
