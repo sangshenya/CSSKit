@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CSSKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of CSSKit.'
 
 # This description is used to generate tags and improve search results.
@@ -30,25 +30,27 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
   s.source_files = 'CSSKit/Classes'
-  s.static_framework = ture
-  s.requires_arc = ture
+#  s.static_framework = ture
+#  s.requires_arc = ture
+
+  s.frameworks = 'UIKit', 'CoreTelephony', 'SystemConfiguration'
   
   s.subspec 'UIKit' do |ss|
       ss.source_files = 'CSSKit/Classes/UIKit/**/*'
   end
-  
+
   s.subspec 'Foundation' do |ss|
       ss.source_files = 'CSSKit/Classes/Foundation/**/*'
   end
-  
+
   s.subspec 'Quartz' do |ss|
       ss.source_files = 'CSSKit/Classes/Quartz/**/*'
   end
-  
+
   s.subspec 'Macros' do |ss|
       ss.source_files = 'CSSKit/Classes/Macros/**/*'
   end
-  
+
   # s.resource_bundles = {
   #   'CSSKit' => ['CSSKit/Assets/*.png']
   # }

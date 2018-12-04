@@ -1,5 +1,13 @@
 PODS:
-  - CSSKit (0.1.0)
+  - CSSKit (0.1.0):
+    - CSSKit/Foundation (= 0.1.0)
+    - CSSKit/Macros (= 0.1.0)
+    - CSSKit/Quartz (= 0.1.0)
+    - CSSKit/UIKit (= 0.1.0)
+  - CSSKit/Foundation (0.1.0)
+  - CSSKit/Macros (0.1.0)
+  - CSSKit/Quartz (0.1.0)
+  - CSSKit/UIKit (0.1.0)
 
 DEPENDENCIES:
   - CSSKit (from `../`)
@@ -9,7 +17,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CSSKit: 84f05d21d44a306f23c6203e08e33d043e113818
+  CSSKit: c19ca52e5154b8013a493dcb055b7e6abcecf300
 
 PODFILE CHECKSUM: b8bf62839f5b464ff5fea9614df4ef87224648a5
 
