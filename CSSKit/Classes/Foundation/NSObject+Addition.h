@@ -17,6 +17,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)swizzleClassMethod:(SEL)originalSel with:(SEL)newSel;
 
+/**
+ Put the object serialization into json data
+ 
+ @param error error description
+ @return return jsonData
+ */
+- (NSData *)css_serializationToJsonDataWithError:(NSError **)error;
+
+/**
+ Put the object serialization into Dictionary
+ 
+ @return dict
+ */
+- (NSMutableDictionary *)css_toDic;
+
 @end
 
 NS_ASSUME_NONNULL_END

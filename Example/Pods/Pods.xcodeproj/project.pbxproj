@@ -29,6 +29,8 @@
 		A73224EE268C358CDF45A553CEE19430 /* NSData+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = D52FA104D12BA7B81DAE6EB142149A86 /* NSData+Addition.m */; };
 		AD709C84F90C72B132F4DD25B89560B1 /* CSSKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F0BF3E436392B7FFB7B9F31A020031A /* CSSKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B97027E472E97357125F146256B234CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548E512BD522BAD01ACBC735C262A518 /* Foundation.framework */; };
+		BF14927521B68B470067C73C /* UIView+Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = BF14927321B68B470067C73C /* UIView+Addition.h */; };
+		BF14927621B68B470067C73C /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = BF14927421B68B470067C73C /* UIView+Addition.m */; };
 		CE1BA731E3A39D49BDB3EFC2FA737629 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BFACBAC3A77C71163408D807B73D80 /* CoreTelephony.framework */; };
 		D3F9B2C6DBD9C4A9A7FCB230172B6E4F /* NSString+Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = 523B71C017E39D0C85FD6A23247F28A8 /* NSString+Addition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB27C45B5ADCCAA0314AAC2B91E301AB /* CSSCGUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 06BA546D64F02BEA54EA983752CABCBD /* CSSCGUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -94,6 +96,8 @@
 		A9C6509920175890D8337ACDA1FD5A07 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8D9417E6F60FA70EE00235E17C100F3 /* NSDictionary+Addition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Addition.h"; path = "CSSKit/Classes/Foundation/NSDictionary+Addition.h"; sourceTree = "<group>"; };
 		BDD47DDFA403F49135AC2B4E3834821E /* Pods-CSSKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSSKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BF14927321B68B470067C73C /* UIView+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		BF14927421B68B470067C73C /* UIView+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		C11C962BD389ACBD72313EAB871BCBC2 /* NSKeyedUnarchiver+Addition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSKeyedUnarchiver+Addition.h"; path = "CSSKit/Classes/Foundation/NSKeyedUnarchiver+Addition.h"; sourceTree = "<group>"; };
 		C5D2D54E7783A207F9846D923D00C358 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C676856F064CAB71F5CF6A08BCA78A69 /* Pods_CSSKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSSKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +249,7 @@
 		9CAA1525A8B6CC8A8E4F4F057E4C8DD4 /* CSSKit */ = {
 			isa = PBXGroup;
 			children = (
+				BF14927221B68B180067C73C /* UIKit */,
 				170ECFE2A7C5579B252E3E580EF02FCA /* Foundation */,
 				7BC416A81BB88FF214E9BDC34EEAEBDE /* Macros */,
 				CB2897E2DB0EAEBB2B385156EC786B89 /* Pod */,
@@ -282,6 +287,16 @@
 				D750379B1557A43129EE40D9A4D6A29C /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		BF14927221B68B180067C73C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				BF14927321B68B470067C73C /* UIView+Addition.h */,
+				BF14927421B68B470067C73C /* UIView+Addition.m */,
+			);
+			name = UIKit;
+			path = CSSKit/Classes/UIKit;
 			sourceTree = "<group>";
 		};
 		CB2897E2DB0EAEBB2B385156EC786B89 /* Pod */ = {
@@ -330,6 +345,7 @@
 				AD709C84F90C72B132F4DD25B89560B1 /* CSSKit-umbrella.h in Headers */,
 				6520DFAB3AC83A3997A40D903775F14E /* CSSMacros.h in Headers */,
 				302D2184CC476A94E949818B73FBBD10 /* NSArray+Addition.h in Headers */,
+				BF14927521B68B470067C73C /* UIView+Addition.h in Headers */,
 				82FD9EBBF8D461A2F673F1229DD02232 /* NSData+Addition.h in Headers */,
 				1D732C042E1EC796DD28B1FD6B690819 /* NSDate+Addition.h in Headers */,
 				5B013A5CF22685FFBC8476DD4C294F42 /* NSDictionary+Addition.h in Headers */,
@@ -485,6 +501,7 @@
 				A73224EE268C358CDF45A553CEE19430 /* NSData+Addition.m in Sources */,
 				772C341597C69289266B62220EAD0340 /* NSDate+Addition.m in Sources */,
 				E5DD97760ACE478F6B4E4C3D65F001A9 /* NSDictionary+Addition.m in Sources */,
+				BF14927621B68B470067C73C /* UIView+Addition.m in Sources */,
 				2F2745847AF91FA05FA2A2527EB65823 /* NSKeyedUnarchiver+Addition.m in Sources */,
 				5DCC6D53EB9FF062F348594289A1EC24 /* NSObject+Addition.m in Sources */,
 				0408756A9A968D776736CD287C825FDA /* NSString+Addition.m in Sources */,
