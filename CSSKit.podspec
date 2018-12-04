@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CSSKit'
-  s.version          = '0.1.4'
+  s.version          = '0.1.6'
   s.summary          = 'A short description of CSSKit.'
 
 # This description is used to generate tags and improve search results.
@@ -51,8 +51,8 @@ TODO: Add long description of the pod here.
       ss.source_files = 'CSSKit/Classes/Macros/**/*'
   end
   
-  s.subspec 'UIKit' do |ss|
-      ss.source_files = 'CSSKit/Classes/UIKit/**/*'
+  s.subspec 'UI' do |ss|
+      ss.source_files = 'CSSKit/Classes/UI/**/*'
   end
 
   # s.resource_bundles = {
