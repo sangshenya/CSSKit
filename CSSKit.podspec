@@ -21,16 +21,33 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/陈坤/CSSKit'
+  s.homepage         = 'https://github.com/sangshenya/CSSKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '陈坤' => 'sangshen@ecook.cn' }
-  s.source           = { :git => 'https://github.com/陈坤/CSSKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/sangshenya/CSSKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'CSSKit/Classes/**/*'
+  s.source_files = 'CSSKit/Classes'
+  s.static_framework = ture
+  s.requires_arc = ture
+  
+  s.subspec 'UIKit' do |ss|
+      ss.source_files = 'CSSKit/Classes/UIKit/**/*'
+  end
+  
+  s.subspec 'Foundation' do |ss|
+      ss.source_files = 'CSSKit/Classes/Foundation/**/*'
+  end
+  
+  s.subspec 'Quartz' do |ss|
+      ss.source_files = 'CSSKit/Classes/Quartz/**/*'
+  end
+  
+  s.subspec 'Macros' do |ss|
+      ss.source_files = 'CSSKit/Classes/Macros/**/*'
+  end
   
   # s.resource_bundles = {
   #   'CSSKit' => ['CSSKit/Assets/*.png']

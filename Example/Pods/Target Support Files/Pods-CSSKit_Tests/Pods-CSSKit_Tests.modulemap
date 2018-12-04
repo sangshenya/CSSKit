@@ -1,0 +1,6 @@
+framework module Pods_CSSKit_Tests {
+  umbrella header "Pods-CSSKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
