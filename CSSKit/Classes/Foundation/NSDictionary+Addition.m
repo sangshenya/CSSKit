@@ -23,3 +23,13 @@
 }
 
 @end
+
+@implementation NSMutableDictionary (Addition)
+
+- (void)css_setValidValue:(id)value forKey:(id<NSCopying>)key {
+    if (value != nil) {
+        [self setObject:value forKey:key];
+    }
+}
+
+@end

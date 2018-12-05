@@ -15,4 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface NSMutableDictionary (Addition)
+
+- (void)css_setValidValue:(id)value forKey:(id<NSCopying>)key;
+
+@end
 NS_ASSUME_NONNULL_END
